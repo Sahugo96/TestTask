@@ -195,6 +195,9 @@ body {
     &::after {
       background-color: $secondary-color;
     }
+    svg {
+      fill: $secondary-color;
+    }
   }
 }
 
@@ -606,7 +609,6 @@ body {
     &.favorite .gallery__favorite {
       opacity: 1;
       background-image: url(../images/heart-fill.svg);
-
     }
     &.is-not {
       .gallery {
@@ -616,6 +618,9 @@ body {
         }
         &__there-is {
           color: #c74a2c;
+        }
+        &__basket {
+          display: none;
         }
       }
     }
@@ -709,6 +714,11 @@ body {
       letter-spacing: 0.01em;
       color: #828282;
     }
+  }
+  &__basket::after {
+    top: 0;
+    right: -1px;
+    left: auto;
   }
   &__activity {
     opacity: 0;
